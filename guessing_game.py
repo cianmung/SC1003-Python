@@ -34,11 +34,13 @@ if selectedGame == 1:
                     print("You can start the game now")
                     break
             else: 
-                print('Wrong input format. Please try again.')
                 if count < 3:
+                    print('Wrong input format. Please try again.')
                     guess = input("Enter an integer from 1 to 9: ")
                     if guess.isnumeric():
                         guessCount+=1
+                elif count >= 3:
+                    print('Wrong input format.')
     else:
         print("Sorry, you exceed the trial limit. Failed.")
 elif selectedGame == 2:
@@ -50,7 +52,6 @@ elif selectedGame == 2:
         totalNumber += randomNumber + count
         count += 1
     answer = int(input("Please enter your answer: "))
-    print(totalNumber)
     if(answer == totalNumber):
         print("You can start the game now")
     else:
