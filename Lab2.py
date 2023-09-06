@@ -1,8 +1,8 @@
 import random
 
 print("Please select one of the following quizzes:\n\t1.Number guessing\n\t2.Calculate sum")
-selectedGame = int(input())
-if selectedGame == 1:
+
+def guessingGame():
     randomNumber = random.randint(1, 9)
     count = 0
     guessCount = 0
@@ -43,6 +43,10 @@ if selectedGame == 1:
                     print('Wrong input format.')
     else:
         print("Sorry, you exceed the trial limit. Failed.")
+
+selectedGame = int(input())
+if selectedGame == 1:
+    guessingGame()
 elif selectedGame == 2:
     randomNumber = random.randint(55, 66)
     print('Please calculate the sum of 5 integers start from {}'.format(randomNumber))
